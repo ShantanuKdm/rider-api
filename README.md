@@ -4,13 +4,13 @@
 - Sign Up
 ```bash
 curl  -X POST \
-'http://127.0.0.1:8000/app/signup' \
---header 'Accept: */*' \
---header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
---form 'contact_number="456789"' \
---form 'password="123"' \
---form 'name="Shantanu"' \
---form 'aadhaar_card=@c:\Users\Shant\OneDrive\Pictures\ABT33410F98F2E5CCB902A740C7C2A7111F7B34BF0E845D291EFF6E6915E11262C5.jpg'
+  'http://127.0.0.1:8000/app/signup' \
+  --header 'Accept: */*' \
+  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
+  --form 'contact_number="456789"' \
+  --form 'password="123"' \
+  --form 'name="Shantanu"' \
+  --form 'aadhaar_card=@c:\Users\Shant\OneDrive\Pictures\ABT33410F98F2E5CCB902A740C7C2A7111F7B34BF0E845D291EFF6E6915E11262C5.jpg'
 ```
 
 - Update Profile
@@ -24,4 +24,12 @@ curl  -X PUT \
   --form 'password="123"' \
   --form 'name="Shantanu"' \
   --form 'aadhaar_card=@c:\Users\Shant\OneDrive\Pictures\ABT33410F98F2E5CCB902A740C7C2A7111F7B34BF0E845D291EFF6E6915E11262C5.jpg'
+```
+
+- Get Tasks by Tour
+```bash
+curl  -X GET \
+  'http://127.0.0.1:8000/app/tasks/10-10-10-54*3bc9c30d11b44413a0fa280d0f218069*tour-1/?status=ONGOING' \
+  --header 'Accept: */*' \
+  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)'
 ```
